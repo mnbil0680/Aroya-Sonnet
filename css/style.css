@@ -100,64 +100,6 @@ body {
     background-color: var(--white-bg);
 }
 
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.logo {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--text-main);
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 600;
-    transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-    color: var(--btn-color);
-    background-color: rgba(0, 144, 208, 0.1);
-    outline: none;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-main);
-}
 
 /* Hero Section */
 .hero {
@@ -165,7 +107,7 @@ body {
     /* background: linear-gradient(rgba(7, 16, 65, 0.4), rgba(7, 16, 65, 0.4)),
             url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23194f94" width="1200" height="800"/><circle fill="%230090d0" cx="300" cy="200" r="100" opacity="0.3"/><circle fill="%23ecf3fa" cx="900" cy="600" r="150" opacity="0.2"/><path fill="%23071041" d="M0,400 Q300,200 600,400 T1200,400 L1200,800 L0,800 Z" opacity="0.3"/></svg>'); */
 
-    background: url(./imgs/p1.jpg);
+    background: url(../imgs/p1.jpg);
 
     background-size: cover;
     background-position: center;

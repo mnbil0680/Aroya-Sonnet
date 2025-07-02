@@ -26,9 +26,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
 
 
+    <!-- For Search Box Engine -->
+    <link rel="stylesheet" href="./css/searchBox/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/searchBox/cruise-search-form-option-6.css">
+    <link rel="stylesheet" href="./css/searchBox/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+
+
+
+    <script language="javascript" type="text/javascript" src="./js/searchBox/OVExplore.min.js"></script>
+
+    <script>
+        window.OVExplore6 = {
+            /*'OVExplore' name should be match with your tag's search-form-settings property. i.e. <ody-search-form search-form-settings="OVExplore"></ody-search-form> */
+            preferences: {
+                languageId: "13", // Set your Language Id. Default Value : 1
+                siteItemId: "1299888", // Replace your SIID here.
+                sid1: "", // External ref 1
+                sid2: "", // External ref 2
+                referrer: "",
+                showStateNCountryWithPorts: true,
+                resultWindowType: "_blank", //specifies result window type of results Options: 1._blank 2._self 3._top
+                cruiseSearchFields: {
+                    // specifies the fields to be displayed on cruise search form, one can move fields from basic to advance and vice versa as per his/her preference */
+                    basic: [
+                        "destination",
+                        "sailingdate",
+                        "duration",
+                        "cruiseline",
+                        //"departureport",
+                        //"ship",
+                        //"cruisetypecheckbox",
+                        //"packagetourscheckbox",
+                        //"allpackagescheckbox",
+                        //"allpackagescheckbox",
+                        //"includeinternalcruiselinescheckbox",
+                        //"newwindowcheckbox",
+                    ],
+                    advance: [
+                        "departureport",
+                        "ship",
+                        "cruisetypecheckbox",
+                        "packagetourscheckbox",
+                        "allpackagescheckbox",
+                        "allpackagescheckbox",
+                        "includeinternalcruiselinescheckbox",
+                        "newwindowcheckbox"
+                    ],
+                },
+            },
+            siteSettings: {
+                productType: "cruise",
+                domain: "ui.odysol.com", // Replace your domain name here.
+                // theme: "default",
+                numberOfCols: 4,
+                themeColor: "#0071a9|#fff|#0071a9|#fff", // specfies primary | secondary| text color | button text color for search form Default value:#0978bd|#8eccf3|#fff|#fff
+            },
+            cruiseWidgetSettings: {
+                widgetType:
+                    "single" /* To be used to set select dropdown type versions. Default value: multiple, Options: 1.multiple 2.single*/,
+            },
+        };
+
+    </script>
 </head>
 
 <body>
@@ -179,7 +243,14 @@
         <section id="search" class="section search">
             <div class="container">
                 <h2 class="section-title">ابحث عن رحلتك المثالية</h2>
-                <form class="search-form" role="search" aria-label="نموذج البحث عن الرحلات">
+
+                <div class="tab-content border border-top-0 mb-3 custom-tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade pt-2 show active" id="option-six" role="tabpanel"
+                        aria-labelledby="option-six-tab">
+                        <ody-search-form search-form-settings="OVExplore6"></ody-search-form>
+                    </div>
+                </div>
+                <!-- <form class="search-form" role="search" aria-label="نموذج البحث عن الرحلات">
                     <div class="form-group">
                         <label for="destination">الوجهة</label>
                         <select id="destination" name="destination" required>
@@ -218,7 +289,7 @@
                     </div>
 
                     <button type="submit" class="search-button">ابحث الآن</button>
-                </form>
+                </form> -->
             </div>
         </section>
 
@@ -355,7 +426,12 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
+
+
+    <!-- For Search Box Engine -->
+    <script src="./js/searchBox/v321jquery.min.js"></script>
+    <script src="./js/searchBox/bootstrap.min.js"></script>
 </body>
 
 </html>
