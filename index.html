@@ -1,601 +1,45 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="أروع رحلات الكروز في الشرق الأوسط مع أرويا كروز - استمتع بتجربة فاخرة وخدمة استثنائية في البحر الأحمر والخليج العربي">
+    <meta name="description"
+        content="أروع رحلات الكروز في الشرق الأوسط مع أرويا كروز - استمتع بتجربة فاخرة وخدمة استثنائية في البحر الأحمر والخليج العربي">
     <meta name="keywords" content="كروز, رحلات بحرية, أرويا, السعودية, البحر الأحمر, سياحة">
     <meta name="author" content="Aroya Cruise">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="أرويا كروز - رحلات بحرية فاخرة">
     <meta property="og:description" content="اكتشف أجمل الوجهات البحرية مع أرويا كروز">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
-    
+
     <title>أرويا كروز - رحلات بحرية فاخرة في الشرق الأوسط</title>
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚢</text></svg>">
-    
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚢</text></svg>">
+
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-section: #071041;
-            --btn-color: #0090d0;
-            --white-bg: #ecf3fa;
-            --text-main: #194f94;
-            --gray-optional: #333;
-        }
+    <link rel="stylesheet" href="./style.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Cairo', sans-serif;
-            line-height: 1.6;
-            color: var(--gray-optional);
-            background-color: var(--white-bg);
-        }
-
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            transition: color 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-        }
-
-        .nav-links a:hover,
-        .nav-links a:focus {
-            color: var(--btn-color);
-            background-color: rgba(0, 144, 208, 0.1);
-            outline: none;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-main);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(7, 16, 65, 0.4), rgba(7, 16, 65, 0.4)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23194f94" width="1200" height="800"/><circle fill="%230090d0" cx="300" cy="200" r="100" opacity="0.3"/><circle fill="%23ecf3fa" cx="900" cy="600" r="150" opacity="0.2"/><path fill="%23071041" d="M0,400 Q300,200 600,400 T1200,400 L1200,800 L0,800 Z" opacity="0.3"/></svg>');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--btn-color);
-            color: white;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 144, 208, 0.3);
-        }
-
-        .cta-button:hover,
-        .cta-button:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 144, 208, 0.4);
-            outline: 3px solid rgba(255, 255, 255, 0.5);
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 5rem 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--text-main);
-            text-align: center;
-            margin-bottom: 3rem;
-            font-weight: 700;
-        }
-
-        /* Ship Section */
-        .ship-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .ship-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(45deg, var(--btn-color), var(--text-main));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            color: white;
-            box-shadow: 0 10px 30px rgba(0, 144, 208, 0.2);
-        }
-
-        .ship-info h3 {
-            font-size: 2rem;
-            color: var(--text-main);
-            margin-bottom: 1rem;
-        }
-
-        .ship-features {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .ship-features li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(25, 79, 148, 0.1);
-            position: relative;
-            padding-right: 2rem;
-            font-weight: 500;
-        }
-
-        .ship-features li:before {
-            content: '✓';
-            position: absolute;
-            right: 0;
-            color: var(--btn-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Travels Section */
-        .travels {
-            background: white;
-        }
-
-        .travels-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .travel-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .travel-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .travel-image {
-            height: 200px;
-            background: linear-gradient(45deg, var(--btn-color), var(--text-main));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
-
-        .travel-info {
-            padding: 1.5rem;
-        }
-
-        .travel-info h4 {
-            font-size: 1.3rem;
-            color: var(--text-main);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .travel-details {
-            display: grid;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .travel-detail {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .travel-detail strong {
-            color: var(--text-main);
-        }
-
-        /* Search Section */
-        .search {
-            background: var(--bg-section);
-            color: white;
-        }
-
-        .search-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        .form-group input,
-        .form-group select {
-            padding: 1rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            backdrop-filter: blur(10px);
-        }
-
-        .form-group input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .search-button {
-            grid-column: 1 / -1;
-            background: var(--btn-color);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            justify-self: center;
-            max-width: 300px;
-        }
-
-        .search-button:hover,
-        .search-button:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 144, 208, 0.4);
-            outline: 3px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* Gallery Section */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .gallery-item {
-            height: 250px;
-            background: linear-gradient(45deg, var(--btn-color), var(--text-main));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .gallery-item:hover::after {
-            opacity: 1;
-        }
-
-        /* FAQ Section */
-        .faq {
-            background: white;
-        }
-
-        .faq-item {
-            margin-bottom: 1rem;
-            border: 1px solid rgba(25, 79, 148, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 1.5rem;
-            background: none;
-            border: none;
-            text-align: right;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-main);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .faq-question:hover,
-        .faq-question:focus {
-            background-color: rgba(25, 79, 148, 0.05);
-            outline: none;
-        }
-
-        .faq-icon {
-            transition: transform 0.3s ease;
-            font-size: 1.2rem;
-            color: var(--btn-color);
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 1.5rem;
-            max-height: 200px;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--bg-section);
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--btn-color);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section ul li a:hover,
-        .footer-section ul li a:focus {
-            color: var(--btn-color);
-            outline: 1px solid var(--btn-color);
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--btn-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icon:hover,
-        .social-icon:focus {
-            transform: scale(1.1);
-            outline: 2px solid white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .ship-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .ship-image {
-                order: -1;
-            }
-
-            .search-form {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        /* Focus styles for accessibility */
-        *:focus {
-            outline: 2px solid var(--btn-color);
-            outline-offset: 2px;
-        }
-
-        /* Skip to content link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: var(--btn-color);
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 1001;
-        }
-
-        .skip-link:focus {
-            top: 6px;
-        }
-    </style>
 </head>
+
 <body>
     <a href="#main" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
-    
+
     <!-- Navbar -->
     <nav class="navbar" role="navigation" aria-label="التنقل الرئيسي">
         <div class="nav-container">
             <a href="#" class="logo" aria-label="أرويا كروز - الصفحة الرئيسية">أرويا كروز 🚢</a>
-            <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false"
+                aria-controls="nav-links">☰</button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#ship">السفينة</a></li>
@@ -611,7 +55,14 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>اكتشف جمال البحر مع أرويا كروز</h1>
+                <h1>
+                    اكتشف جمال البحر مع
+                    <span class="brand-highlight">
+
+
+                        أرويا كروز
+                    </span>
+                </h1>
                 <p>رحلات بحرية فاخرة تجمع بين الراحة والمغامرة في أجمل وجهات الشرق الأوسط</p>
                 <a href="#search" class="cta-button" aria-label="احجز رحلتك الآن">احجز رحلتك الآن</a>
             </div>
@@ -624,7 +75,8 @@
                 <div class="ship-content">
                     <div class="ship-info">
                         <h3>تجربة لا تُنسى على متن أحدث السفن</h3>
-                        <p>استمتع برحلة استثنائية على متن سفينة مجهزة بأحدث التقنيات وأرقى وسائل الراحة. سفينتنا تضم مرافق عالمية المستوى لتضمن لك تجربة لا تُنسى.</p>
+                        <p>استمتع برحلة استثنائية على متن سفينة مجهزة بأحدث التقنيات وأرقى وسائل الراحة. سفينتنا تضم
+                            مرافق عالمية المستوى لتضمن لك تجربة لا تُنسى.</p>
                         <ul class="ship-features">
                             <li>مطاعم عالمية متنوعة تقدم أشهى الأطباق</li>
                             <li>مسابح وصالات رياضية مجهزة بالكامل</li>
@@ -738,12 +190,12 @@
                             <option value="mediterranean">البحر المتوسط</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="departure-date">تاريخ المغادرة</label>
                         <input type="date" id="departure-date" name="departure-date" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="duration">مدة الرحلة</label>
                         <select id="duration" name="duration" required>
@@ -754,7 +206,7 @@
                             <option value="10+">أكثر من 10 أيام</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="guests">عدد الضيوف</label>
                         <select id="guests" name="guests" required>
@@ -765,7 +217,7 @@
                             <option value="5+">5 أشخاص أو أكثر</option>
                         </select>
                     </div>
-                    
+
                     <button type="submit" class="search-button">ابحث الآن</button>
                 </form>
             </div>
@@ -797,47 +249,52 @@
                             <span class="faq-icon">▼</span>
                         </button>
                         <div class="faq-answer" id="faq-1">
-                            <p>تشمل سفينة أرويا كروز مطاعم متنوعة، مسابح، صالات رياضية، مركز سبا، مسارح، ومرافق ترفيهية أخرى. كما توفر غرف فاخرة بإطلالات بحرية رائعة وخدمة عملاء على مدار الساعة.</p>
+                            <p>تشمل سفينة أرويا كروز مطاعم متنوعة، مسابح، صالات رياضية، مركز سبا، مسارح، ومرافق ترفيهية
+                                أخرى. كما توفر غرف فاخرة بإطلالات بحرية رائعة وخدمة عملاء على مدار الساعة.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
                             <span>كيف يمكنني حجز رحلة؟</span>
                             <span class="faq-icon">▼</span>
                         </button>
                         <div class="faq-answer" id="faq-2">
-                            <p>يمكنك حجز رحلتك بسهولة من خلال موقعنا الإلكتروني أو عبر الاتصال بخدمة العملاء. نوفر أيضاً إمكانية الحجز من خلال وكلاء السفر المعتمدين في جميع أنحاء المنطقة.</p>
+                            <p>يمكنك حجز رحلتك بسهولة من خلال موقعنا الإلكتروني أو عبر الاتصال بخدمة العملاء. نوفر أيضاً
+                                إمكانية الحجز من خلال وكلاء السفر المعتمدين في جميع أنحاء المنطقة.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
                             <span>ما هي سياسة الإلغاء؟</span>
                             <span class="faq-icon">▼</span>
                         </button>
                         <div class="faq-answer" id="faq-3">
-                            <p>نوفر سياسة إلغاء مرنة تختلف حسب نوع الحجز وتوقيت الإلغاء. يمكن الإلغاء المجاني حتى 30 يوماً قبل موعد الرحلة، مع رسوم تدريجية بعد ذلك.</p>
+                            <p>نوفر سياسة إلغاء مرنة تختلف حسب نوع الحجز وتوقيت الإلغاء. يمكن الإلغاء المجاني حتى 30
+                                يوماً قبل موعد الرحلة، مع رسوم تدريجية بعد ذلك.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
                             <span>هل تتوفر خدمات خاصة للعائلات؟</span>
                             <span class="faq-icon">▼</span>
                         </button>
                         <div class="faq-answer" id="faq-4">
-                            <p>نعم، نوفر برامج خاصة للأطفال، أنشطة عائلية، غرف عائلية واسعة، ومرافق مخصصة للعائلات. كما يتوفر خدمة رعاية الأطفال المحترفة.</p>
+                            <p>نعم، نوفر برامج خاصة للأطفال، أنشطة عائلية، غرف عائلية واسعة، ومرافق مخصصة للعائلات. كما
+                                يتوفر خدمة رعاية الأطفال المحترفة.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
                             <span>ما هي أفضل أوقات الحجز؟</span>
                             <span class="faq-icon">▼</span>
                         </button>
                         <div class="faq-answer" id="faq-5">
-                            <p>أفضل أوقات الحجز هي في الربيع والخريف حيث يكون الطقس معتدلاً. ننصح بالحجز المبكر للحصول على أفضل الأسعار والخيارات المتاحة.</p>
+                            <p>أفضل أوقات الحجز هي في الربيع والخريف حيث يكون الطقس معتدلاً. ننصح بالحجز المبكر للحصول
+                                على أفضل الأسعار والخيارات المتاحة.</p>
                         </div>
                     </div>
                 </div>
@@ -859,7 +316,7 @@
                         <a href="#" class="social-icon" aria-label="لينكد إن" rel="noopener noreferrer">💼</a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>روابط سريعة</h4>
                     <ul>
@@ -870,7 +327,7 @@
                         <li><a href="#faq">الأسئلة الشائعة</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>معلومات الاتصال</h4>
                     <ul>
@@ -880,7 +337,7 @@
                         <li>🕒 خدمة العملاء: 24/7</li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>الخدمات</h4>
                     <ul>
@@ -892,158 +349,14 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 أرويا كروز. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-            navLinks.classList.toggle('active');
-        });
-
-        // FAQ accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all other FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                    const btn = item.querySelector('.faq-question');
-                    btn.setAttribute('aria-expanded', 'false');
-                });
-                
-                // Toggle current item
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                    question.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-
-        // Search form submission
-        const searchForm = document.querySelector('.search-form');
-        searchForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(searchForm);
-            
-            // Basic validation
-            const destination = formData.get('destination');
-            const departureDate = formData.get('departure-date');
-            const duration = formData.get('duration');
-            const guests = formData.get('guests');
-            
-            if (!destination || !departureDate || !duration || !guests) {
-                alert('يرجى ملء جميع الحقول المطلوبة');
-                return;
-            }
-            
-            // Simulate search results
-            alert(`تم البحث عن رحلة إلى ${destination} لمدة ${duration} لعدد ${guests} في تاريخ ${departureDate}`);
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    
-                    // Close mobile menu after click
-                    navLinks.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        // Gallery item click handler
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', () => {
-                alert('عذراً، المعرض قيد التطوير. سيتم إضافة الصور قريباً!');
-            });
-            
-            // Keyboard support for gallery items
-            item.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    item.click();
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        let lastScrollY = window.scrollY;
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > lastScrollY && window.scrollY > 100) {
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                navbar.style.transform = 'translateY(0)';
-            }
-            lastScrollY = window.scrollY;
-        });
-
-        // Add loading states for better UX
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add loaded class to body for any CSS animations
-            document.body.classList.add('loaded');
-            
-            // Set minimum date for departure date input
-            const departureDateInput = document.getElementById('departure-date');
-            const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            departureDateInput.min = tomorrow.toISOString().split('T')[0];
-        });
-
-        // Enhanced keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            // ESC key closes mobile menu
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.focus();
-            }
-        });
-
-        // Intersection Observer for animations (performance-friendly)
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe sections for scroll animations
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-    </script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
